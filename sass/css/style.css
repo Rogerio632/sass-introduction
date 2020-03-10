@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  padding: 10px 15px;
+  background: #fff;
+  color: #000;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+ul li {
+  display: inline-block;
+  padding: 20px;
+  background: #000;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+ul li:first-child {
+  margin-left: 0px;
+}
+
+ul li:hover {
+  background: #777;
+}
+
+ul li a {
+  color: #f00;
+}

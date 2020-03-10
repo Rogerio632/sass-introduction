@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss"
+	],
+	"sourcesContent": [
+		"/*default colors*/\r\n$red: #f00;\r\n$blue: rgb(0, 26, 255);\r\n\r\ndiv{\r\n  background: $red;\r\n  width: 960px;\r\n  height: 200px;\r\n  a{\r\n    color: $blue;\r\n    text-decoration: none;\r\n    text-transform: lowercase;\r\n  }\r\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,kBAAkB;;AAIlB,AAAA,GAAG,CAAA;EACD,UAAU,EAJN,IAAI;EAKR,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;CAMd;;;AATD,AAIE,GAJC,CAID,CAAC,CAAA;EACC,KAAK,EAPF,OAAe;EAQlB,eAAe,EAAE,IAAI;EACrB,cAAc,EAAE,SAAS;CAC1B"
+}

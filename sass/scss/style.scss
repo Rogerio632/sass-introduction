@@ -1,0 +1,27 @@
+@import "default";
+@import "buttons";
+@import "colors";
+
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  li{
+    display: inline-block;
+    padding: 20px;
+    background: $cor-secundaria;
+    margin-left: 20px;
+    cursor:pointer;
+    &:first-child{
+      margin-left: 0px;
+    }
+    &:hover{
+      transition: 10s;
+      background: #777;
+    }
+    a{
+      color: $cor-primaria;
+    }
+  }
+}
