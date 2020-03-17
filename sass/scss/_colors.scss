@@ -1,2 +1,16 @@
-$cor-primaria: #f00;
-$cor-secundaria: #000;
+$tema: green_world;
+$cor-primaria: red;
+$cor-secundaria: brown;
+
+@if $tema == green_world{
+
+$cor-primaria: rgb(65, 133, 51);
+$cor-secundaria: rgb(30, 78, 37);
+
+}
+@else if $tema == ocean_man{
+
+$cor-primaria: blue;
+$cor-secundaria: powderblue;
+
+}

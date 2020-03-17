@@ -1,6 +1,14 @@
-@mixin hover_color($color){
-  color: $color;
-}
 @mixin border($border-values){
   border: $border-values;
+}
+
+@mixin text-size($value){
+  font-weight: normal;
+  @if $value == 12 {
+    font-size: 12px;
+  }
+  @else if $value == 20{
+    font-size: 20px;
+    font-weight: bold;
+  }
 }
