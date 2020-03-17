@@ -1,6 +1,8 @@
 @import "default";
 @import "buttons";
 @import "colors";
+@import "mixin";
+
 
 ul{
   display: flex;
@@ -10,18 +12,24 @@ ul{
   li{
     display: inline-block;
     padding: 20px;
-    background: $cor-secundaria;
+    background: $cor-primaria;
     margin-left: 20px;
     cursor:pointer;
+    transition: background-color 1s ease-out;
+    @include border(5px solid blue);
+    
     &:first-child{
       margin-left: 0px;
     }
     &:hover{
-      transition: 10s;
-      background: #777;
+      transition: 1s;
+      background: rgb(255, 255, 255);
     }
     a{
-      color: $cor-primaria;
+      color: $cor-secundaria;
+      &:hover{
+        @include hover_color(blue);
+      }
     }
   }
 }

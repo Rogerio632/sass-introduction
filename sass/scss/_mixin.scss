@@ -1,0 +1,6 @@
+@mixin hover_color($color){
+  color: $color;
+}
+@mixin border($border-values){
+  border: $border-values;
+}
