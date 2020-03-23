@@ -3,6 +3,28 @@
 @import "colors";
 @import "mixin";
 
+div{
+  $max: 960px;
+  max-width: $max;
+  width: 100%;
+  height: $max / 2;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div.div-1{
+    max-width: $max / 2; 
+        a{
+      color: #fff;
+    }
+  }
+  div.div-2{
+    max-width: $max / 2;
+    a{
+      color: #fff;
+    }
+  }
+}
 
 ul{
   display: flex;

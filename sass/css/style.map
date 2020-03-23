@@ -2,11 +2,19 @@
 	"version": 3,
 	"file": "style.css",
 	"sources": [
-		"../scss/style.scss"
+		"../scss/style.scss",
+		"../scss/_default.scss",
+		"../scss/_buttons.scss",
+		"../scss/_colors.scss",
+		"../scss/_mixin.scss"
 	],
 	"sourcesContent": [
-		"/*default colors*/\r\n$red: #f00;\r\n$blue: rgb(0, 26, 255);\r\n\r\ndiv{\r\n  background: $red;\r\n  width: 960px;\r\n  height: 200px;\r\n  a{\r\n    color: $blue;\r\n    text-decoration: none;\r\n    text-transform: lowercase;\r\n  }\r\n}"
+		"@import \"default\";\r\n@import \"buttons\";\r\n@import \"colors\";\r\n@import \"mixin\";\r\n\r\ndiv{\r\n  $max: 960px;\r\n  max-width: $max;\r\n  width: 100%;\r\n  height: $max / 2;\r\n  background: #111;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  div.div-1{\r\n    max-width: $max / 2; \r\n        a{\r\n      color: #fff;\r\n    }\r\n  }\r\n  div.div-2{\r\n    max-width: $max / 2;\r\n    a{\r\n      color: #fff;\r\n    }\r\n  }\r\n}\r\n\r\nul{\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  flex-direction: row;\r\n  justify-content: center;\r\n  li{\r\n    display: inline-block;\r\n    padding: 20px;\r\n    background: $cor-primaria;\r\n    margin-left: 20px;\r\n    border-radius: 5px;\r\n    cursor:pointer;\r\n    transition: background-color 1s ease-out;\r\n    @include border(1px solid rgb(16, 71, 34));\r\n    \r\n    &:first-child{\r\n      margin-left: 0px;\r\n    }\r\n    &:hover{\r\n      transition: 1s;\r\n      background: $cor-secundaria;\r\n    }\r\n    a{\r\n      color: #fff;\r\n      @include text-size(20);\r\n    }\r\n  }\r\n}\r\n",
+		"$font-default: Arial, Helvetica, sans-serif;\r\n\r\n*{\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n  font-family: $font-default;\r\n}\r\na{\r\n  text-decoration: none;\r\n}\r\nli{\r\n  list-style: none;\r\n}",
+		"button{\r\n  padding: 10px 15px;\r\n  background: #fff;\r\n  color: #000;\r\n}",
+		"$tema: green_world;\r\n$cor-primaria: red;\r\n$cor-secundaria: brown;\r\n\r\n@if $tema == green_world{\r\n\r\n$cor-primaria: rgb(65, 133, 51);\r\n$cor-secundaria: rgb(30, 78, 37);\r\n\r\n}\r\n@else if $tema == ocean_man{\r\n\r\n$cor-primaria: blue;\r\n$cor-secundaria: powderblue;\r\n\r\n}",
+		"@mixin border($border-values){\r\n  border: $border-values;\r\n}\r\n\r\n@mixin text-size($value){\r\n  font-weight: normal;\r\n  @if $value == 12 {\r\n    font-size: 12px;\r\n  }\r\n  @else if $value == 20{\r\n    font-size: 20px;\r\n    font-weight: bold;\r\n  }\r\n}\r\n"
 	],
 	"names": [],
-	"mappings": "AAAA,kBAAkB;;AAIlB,AAAA,GAAG,CAAA;EACD,UAAU,EAJN,IAAI;EAKR,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;CAMd;;;AATD,AAIE,GAJC,CAID,CAAC,CAAA;EACC,KAAK,EAPF,OAAe;EAQlB,eAAe,EAAE,IAAI;EACrB,cAAc,EAAE,SAAS;CAC1B"
+	"mappings": ";ACEA,AAAA,CAAC,CAAA;EACC,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;EACtB,WAAW,EANE,KAAK,EAAE,SAAS,EAAE,UAAU;CAO1C;;;AACD,AAAA,CAAC,CAAA;EACC,eAAe,EAAE,IAAI;CACtB;;;AACD,AAAA,EAAE,CAAA;EACA,UAAU,EAAE,IAAI;CACjB;;;ACbD,AAAA,MAAM,CAAA;EACJ,OAAO,EAAE,SAAS;EAClB,UAAU,EAAE,IAAI;EAChB,KAAK,EAAE,IAAI;CACZ;;;AFCD,AAAA,GAAG,CAAA;EAED,SAAS,EADH,KAAK;EAEX,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAQ;EAChB,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CAapB;;;AArBD,AASE,GATC,CASD,GAAG,AAAA,MAAM,CAAA;EACP,SAAS,EAAE,KAAQ;CAIpB;;;AAdH,AAWQ,GAXL,CASD,GAAG,AAAA,MAAM,CAEH,CAAC,CAAA;EACH,KAAK,EAAE,IAAI;CACZ;;;AAbL,AAeE,GAfC,CAeD,GAAG,AAAA,MAAM,CAAA;EACP,SAAS,EAAE,KAAQ;CAIpB;;;AApBH,AAiBI,GAjBD,CAeD,GAAG,AAAA,MAAM,CAEP,CAAC,CAAA;EACC,KAAK,EAAE,IAAI;CACZ;;;AAIL,AAAA,EAAE,CAAA;EACA,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,MAAM;CAuBxB;;;AA3BD,AAKE,EALA,CAKA,EAAE,CAAA;EACA,OAAO,EAAE,YAAY;EACrB,OAAO,EAAE,IAAI;EACb,UAAU,EG9BC,OAAgB;EH+B3B,WAAW,EAAE,IAAI;EACjB,aAAa,EAAE,GAAG;EAClB,MAAM,EAAC,OAAO;EACd,UAAU,EAAE,4BAA4B;EIvC1C,MAAM,EJwCY,GAAG,CAAC,KAAK,CAAC,OAAe;CAa1C;;;AA1BH,AAeI,EAfF,CAKA,EAAE,AAUC,YAAY,CAAA;EACX,WAAW,EAAE,GAAG;CACjB;;;AAjBL,AAkBI,EAlBF,CAKA,EAAE,AAaC,MAAM,CAAA;EACL,UAAU,EAAE,EAAE;EACd,UAAU,EGzCC,OAAe;CH0C3B;;;AArBL,AAsBI,EAtBF,CAKA,EAAE,CAiBA,CAAC,CAAA;EACC,KAAK,EAAE,IAAI;EI9Cf,WAAW,EAAE,MAAM;EAKjB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;CJ0ChB"
 }

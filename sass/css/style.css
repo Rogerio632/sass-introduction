@@ -1,1 +1,96 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}a{text-decoration:none}li{list-style:none}button{padding:10px 15px;background:#fff;color:#000}ul{display:flex;flex-wrap:wrap;flex-direction:row;justify-content:center}ul li{display:inline-block;padding:20px;background:#418533;margin-left:20px;border-radius:5px;cursor:pointer;transition:background-color 1s ease-out;border:1px solid #104722}ul li:first-child{margin-left:0px}ul li:hover{transition:1s;background:#1e4e25}ul li a{color:#fff;font-weight:normal;font-size:20px;font-weight:bold}
+/* line 3, ../../Documents/sass-introduction/sass/scss/_default.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* line 9, ../../Documents/sass-introduction/sass/scss/_default.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 12, ../../Documents/sass-introduction/sass/scss/_default.scss */
+li {
+  list-style: none;
+}
+
+/* line 1, ../../Documents/sass-introduction/sass/scss/_buttons.scss */
+button {
+  padding: 10px 15px;
+  background: #fff;
+  color: #000;
+}
+
+/* line 6, ../../Documents/sass-introduction/sass/scss/style.scss */
+div {
+  max-width: 960px;
+  width: 100%;
+  height: 480px;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 15, ../../Documents/sass-introduction/sass/scss/style.scss */
+div div.div-1 {
+  max-width: 480px;
+}
+
+/* line 17, ../../Documents/sass-introduction/sass/scss/style.scss */
+div div.div-1 a {
+  color: #fff;
+}
+
+/* line 21, ../../Documents/sass-introduction/sass/scss/style.scss */
+div div.div-2 {
+  max-width: 480px;
+}
+
+/* line 23, ../../Documents/sass-introduction/sass/scss/style.scss */
+div div.div-2 a {
+  color: #fff;
+}
+
+/* line 29, ../../Documents/sass-introduction/sass/scss/style.scss */
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* line 34, ../../Documents/sass-introduction/sass/scss/style.scss */
+ul li {
+  display: inline-block;
+  padding: 20px;
+  background: #418533;
+  margin-left: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 1s ease-out;
+  border: 1px solid #104722;
+}
+
+/* line 44, ../../Documents/sass-introduction/sass/scss/style.scss */
+ul li:first-child {
+  margin-left: 0px;
+}
+
+/* line 47, ../../Documents/sass-introduction/sass/scss/style.scss */
+ul li:hover {
+  transition: 1s;
+  background: #1e4e25;
+}
+
+/* line 51, ../../Documents/sass-introduction/sass/scss/style.scss */
+ul li a {
+  color: #fff;
+  font-weight: normal;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */
